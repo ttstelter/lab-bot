@@ -127,6 +127,7 @@ namespace LabBot
         {
             var auth = new SingleUserAuthorizer
             {
+                // Fill in this information with your personal Twitter account tokens
                 CredentialStore = new SingleUserInMemoryCredentialStore
                 {
                     ConsumerKey =
