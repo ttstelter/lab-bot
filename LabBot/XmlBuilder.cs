@@ -11,13 +11,13 @@ namespace LabBot
     {
         private string curDir = System.IO.Directory.GetCurrentDirectory();
         private string fileName = "config.xml";
-        private string[] fileData = ["Name of account hold of Discord Channel: ",
+        private string[] fileData = new string[] {"Name of account hold of Discord Channel: ",
             "Discord Token: ",
             "Twitter Consumer Key: ",
             "Twitter Consumer Secret: ",
             "Twitter Access Token: ",
             "Twitter Access Token Secret: ",
-            "Twitch Stream Link (i.e. www.twitch.tv/<your-username>): "];
+            "Twitch Stream Link (i.e. www.twitch.tv/<your-username>): "};
         private List<string> xmlList = new List<string>();
 
         public void fileCreation()
