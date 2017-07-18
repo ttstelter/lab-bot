@@ -9,8 +9,12 @@ namespace LabBot
     public class XmlData
     {
         public string User { get; set; }
+        public string DiscordToken { get; set; }
         public string TwitterKey { get; set; }
-        public string blank1 { get; set; }
-        public string blank2 { get; set; }
+        public string TwitterConsumerKey { get; set; }
+        public string TwitterConsumerSecret { get; set; }
+        public string TwitterAccessToken{ get; set; }
+        public string TwitterAccessSecret { get; set; }
+        public string TwitchLink { get; set; }
     }
 }
