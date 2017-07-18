@@ -30,7 +30,7 @@ namespace LabBot
         // is to have check work correctly
         string username = "Solus";
 
-        // TODO: Use an .ini file to fill tokens and other personal data to make the program more modular 
+        // TODO: Use an .ini/xml file to fill tokens and other personal data to make the program more modular 
 
         public MyBot()
         {
