@@ -11,30 +11,37 @@ namespace LabBot
     {
         private string curDir = System.IO.Directory.GetCurrentDirectory();
         private string fileName = "config.xml";
+        private string[] fileData = ["Name of account hold of Discord Channel: ",
+            "Discord Token: ",
+            "Twitter Consumer Key: ",
+            "Twitter Consumer Secret: ",
+            "Twitter Access Token: ",
+            "Twitter Access Token Secret: ",
+            "Twitch Stream Link (i.e. www.twitch.tv/<your-username>): "];
+        private List<string> xmlList = new List<string>();
 
         public void fileCreation()
         {
             if (!File.Exists(fileName))
             {
-                Console.WriteLine("Name of account hold of Discord Channel: ");
-                var userName = Console.ReadLine();
-
-                Console.WriteLine("Twitter Consumer Key ");
-                var twitterKey= Console.ReadLine();
-
-                Console.WriteLine("blankOne ");
-                var blank1 = Console.ReadLine();
-
-                Console.WriteLine("blankTwo ");
-                var blank2 = Console.ReadLine();
+                for(int i =0; i < fileData.Length; i++)
+                {
+                    Console.WriteLine(fileData[i]);
+                    var item = Console.ReadLine().Trim();
+                    xmlList.Add(item);
+                }
 
                 // The XmlData class must be public for the XmlHelper to work.  RISK:  Otherwise InvalidOperationExeception is thrown.
                 var xmlData = new XmlData
                 {
-                    User = userName,
-                    TwitterKey = twitterKey,
-                    blank1 = blank1,
-                    blank2 = blank2
+                    User = xmlList.ElementAt(0),
+                    DiscordToken = xmlList.ElementAt(1),
+                    TwitterKey = xmlList.ElementAt(2),
+                    TwitterConsumerKey = xmlList.ElementAt(3),
+                    TwitterConsumerSecret = xmlList.ElementAt(4),
+                    TwitterAccessToken = xmlList.ElementAt(5),
+                    TwitterAccessSecret = xmlList.ElementAt(6),
+                    TwitchLink = xmlList.ElementAt(7)
                 };
 
                 var data = XmlHelper.ToXml(xmlData);
