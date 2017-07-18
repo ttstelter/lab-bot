@@ -10,7 +10,10 @@ namespace LabBot
     {
         static void Main(string[] args)
         {
-            MyBot bot = new MyBot();
+            XmlBuilder builder = new XmlBuilder();
+            builder.fileCreation();
+            // Commented out until I get the data portion working correctly
+            //MyBot bot = new MyBot();
         }
     }
 }
