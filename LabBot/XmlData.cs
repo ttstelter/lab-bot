@@ -10,7 +10,6 @@ namespace LabBot
     {
         public string User { get; set; }
         public string DiscordToken { get; set; }
-        public string TwitterKey { get; set; }
         public string TwitterConsumerKey { get; set; }
         public string TwitterConsumerSecret { get; set; }
         public string TwitterAccessToken{ get; set; }

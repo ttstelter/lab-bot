@@ -36,12 +36,11 @@ namespace LabBot
                 {
                     User = xmlList.ElementAt(0),
                     DiscordToken = xmlList.ElementAt(1),
-                    TwitterKey = xmlList.ElementAt(2),
-                    TwitterConsumerKey = xmlList.ElementAt(3),
-                    TwitterConsumerSecret = xmlList.ElementAt(4),
-                    TwitterAccessToken = xmlList.ElementAt(5),
-                    TwitterAccessSecret = xmlList.ElementAt(6),
-                    TwitchLink = xmlList.ElementAt(7)
+                    TwitterConsumerKey = xmlList.ElementAt(2),
+                    TwitterConsumerSecret = xmlList.ElementAt(3),
+                    TwitterAccessToken = xmlList.ElementAt(4),
+                    TwitterAccessSecret = xmlList.ElementAt(5),
+                    TwitchLink = xmlList.ElementAt(6)
                 };
 
                 var data = XmlHelper.ToXml(xmlData);
